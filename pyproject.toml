@@ -1,6 +1,25 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "data-refinery"
+version = "0.1.0"
+description = "Data refinery project"
+authors = ["Deepak <deepak@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.15"
+fastapi = "^0.104.0"
+sqlalchemy = "^2.0.0"
+torch = "2.11.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0.0"
+ruff = "^0.1.0"
+pre-commit = "^3.0.0"
 
 [tool.black]
 line-length = 88
